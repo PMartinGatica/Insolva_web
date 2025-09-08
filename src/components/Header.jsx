@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,9 +37,27 @@ const Header = () => {
 
   const handleNavClick = (href) => {
     setIsMenuOpen(false)
-    setTimeout(() => {
-      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-    }, 100)
+    
+    // Si no estamos en la página principal, navegar primero
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    } else {
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+      }, 100)
+    }
+  }
+
+  const handleLogoClick = () => {
+    setIsMenuOpen(false)
+    if (location.pathname !== '/') {
+      navigate('/')
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 
   return (
@@ -50,7 +71,8 @@ const Header = () => {
             <img 
               src="/images/insolvalogo.png" 
               alt="Insolva" 
-              className="h-8 sm:h-10 w-auto"
+              className="h-8 sm:h-10 w-auto cursor-pointer"
+              onClick={handleLogoClick}
             />
           </div>
 

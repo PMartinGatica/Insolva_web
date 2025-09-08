@@ -1,58 +1,30 @@
-import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Services from './components/Services'
-import Team from './components/Team'
-import Contact from './components/Contact'
+import Home from './components/Home'
+import TerminosCondiciones from './components/TerminosCondiciones'
+import PoliticaPrivacidad from './components/PoliticaPrivacidad'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import NotFound from './components/NotFound'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
-  // Animación scroll
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate')
-        }
-      })
-    }, observerOptions)
-
-    // Observar elementos con clase animate-on-scroll
-    const animateElements = document.querySelectorAll('.animate-on-scroll')
-    animateElements.forEach(el => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <div className="App">
-      <Header />
-      <div id="inicio">
-        <Hero />
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+          <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+        <WhatsAppFloat />
       </div>
-      <div id="nosotros">
-        <About />
-      </div>
-      <div id="servicios">
-        <Services />
-      </div>
-      <div id="equipo">
-        <Team />
-      </div>
-      <div id="contacto">
-        <Contact />
-      </div>
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    </Router>
   )
 }
 

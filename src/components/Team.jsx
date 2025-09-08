@@ -1,24 +1,24 @@
 const Team = () => {
   const teamMembers = [
     {
-      name: "Pablo",
-      role: "Socio Fundador",
-      description: "Especialista en optimización de procesos y gestión operativa"
+      name: "Pablo Gatica",
+      role: "Analista de Calidad",
+      description: "Técnico en electrónica y automatización industrial. Especialista en desarrollo de aplicaciones y control de calidad de procesos."
     },
     {
-      name: "Lucho",
-      role: "Socio Fundador",
-      description: "Experto en automatización y soluciones tecnológicas"
+      name: "Gabriel Luna",
+      role: "Ingeniero Industrial",
+      description: "Experto en layout, metodología 5S y mejora continua aplicada. Especialista en lean manufacturing y optimización de espacios."
     },
     {
-      name: "Luna",
-      role: "Socia Fundadora", 
-      description: "Especialista en certificaciones y cumplimiento normativo"
+      name: "Luis Hasenauer",
+      role: "Desarrollador de Aplicaciones",
+      description: "Especialista en implementación de dashboards y sistemas de trazabilidad para procesos productivos eficientes. Experto en layouts y mejora continua."
     },
     {
-      name: "Marcos",
-      role: "Socio Fundador",
-      description: "Técnico en informática, redes, documentación, 5S, lean manufacturing"
+      name: "Marcos Ferreyra",
+      role: "Técnico IT",
+      description: "Especialista en integración de infraestructura tecnológica y soporte en procesos de conectividad. Experto en redes y sistemas."
     }
   ];
 
@@ -38,7 +38,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2 p-6 text-center"
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2 p-6 text-center min-h-[280px] flex flex-col"
             >
               {/* Icono de persona en lugar de foto */}
               <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-green-500 rounded-full flex items-center justify-center">
@@ -46,13 +46,13 @@ const Team = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {member.name}
               </h3>
-              <p className="text-blue-600 font-semibold mb-3">
+              <p className="text-blue-600 font-semibold mb-3 text-sm">
                 {member.role}
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                 {member.description}
               </p>
             </div>
