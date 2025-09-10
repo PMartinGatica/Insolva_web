@@ -32,7 +32,7 @@ const Header = () => {
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Equipo', href: '#equipo' },
-    { name: 'Contacto', href: '#contacto' }
+    // { name: 'Contacto', href: '#contacto' }
   ]
 
   const handleNavClick = (href) => {

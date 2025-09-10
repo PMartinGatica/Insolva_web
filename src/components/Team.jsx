@@ -1,25 +1,25 @@
 const Team = () => {
   const teamMembers = [
-    {
-      name: "Pablo Gatica",
-      role: "Analista de Calidad",
-      description: "Técnico en electrónica y automatización industrial. Especialista en desarrollo de aplicaciones y control de calidad de procesos."
-    },
-    {
-      name: "Gabriel Luna",
-      role: "Ingeniero Industrial",
-      description: "Experto en layout, metodología 5S y mejora continua aplicada. Especialista en lean manufacturing y optimización de espacios."
-    },
-    {
-      name: "Luis Hasenauer",
-      role: "Desarrollador de Aplicaciones",
-      description: "Especialista en implementación de dashboards y sistemas de trazabilidad para procesos productivos eficientes. Experto en layouts y mejora continua."
-    },
-    {
-      name: "Marcos Ferreyra",
-      role: "Técnico IT",
-      description: "Especialista en integración de infraestructura tecnológica y soporte en procesos de conectividad. Experto en redes y sistemas."
-    }
+    // {
+    //   name: "Pablo Gatica",
+    //   role: "Analista de Calidad",
+    //   description: "Técnico en electrónica y automatización industrial. Especialista en desarrollo de aplicaciones y control de calidad de procesos."
+    // },
+    // {
+    //   name: "Gabriel Luna",
+    //   role: "Ingeniero Industrial",
+    //   description: "Experto en layout, metodología 5S y mejora continua aplicada. Especialista en lean manufacturing y optimización de espacios."
+    // },
+    // {
+    //   name: "Luis Hasenauer",
+    //   role: "Desarrollador de Aplicaciones",
+    //   description: "Especialista en implementación de dashboards y sistemas de trazabilidad para procesos productivos eficientes. Experto en layouts y mejora continua."
+    // },
+    // {
+    //   name: "Marcos Ferreyra",
+    //   role: "Técnico IT",
+    //   description: "Especialista en integración de infraestructura tecnológica y soporte en procesos de conectividad. Experto en redes y sistemas."
+    // }
   ];
 
   return (
@@ -29,9 +29,9 @@ const Team = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Nuestro <span className="text-blue-600">Equipo</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        {/*<p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Combinando experiencia y pasión por ayudar a las empresas a crecer
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
@@ -61,9 +61,9 @@ const Team = () => {
 
         <div className="text-center mt-12">
           <div className="bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            {/* <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Un equipo con experiencia trabajando juntos
-            </h3>
+            </h3> */}
             <p className="text-lg text-gray-700 leading-relaxed">
               Somos un grupo de socios que decidimos crear <span className="font-bold text-blue-600">Insolva</span> para 
               compartir nuestra experiencia adquirida y ayudar a otras PyMES y empresas a alcanzar su máximo potencial. 
