@@ -31,7 +31,7 @@ Mensaje: ${formData.message}`;
     
     const encodedMessage = encodeURIComponent(message);
     // WhatsApp de Insolva
-    window.open(`https://wa.me/+5492901502672?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/+5492901308927?text=${encodedMessage}`, '_blank');
   };
 
   const services = [
@@ -74,7 +74,7 @@ Mensaje: ${formData.message}`;
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">WhatsApp</p>
-                    <p className="text-gray-600">+54 290 150-2672</p>
+                    <p className="text-gray-600">+54 9 2901 308-927</p>
                   </div>
                 </div>
 

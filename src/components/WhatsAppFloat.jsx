@@ -1,7 +1,7 @@
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     // WhatsApp de Insolva
-    const phoneNumber = "+5492901502672";
+    const phoneNumber = "+5492901308927";
     const message = "¡Hola! Me interesa conocer más sobre los servicios de Insolva.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');

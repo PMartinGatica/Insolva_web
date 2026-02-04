@@ -63,12 +63,12 @@ const NotFound = () => {
             <div className="flex items-center justify-center space-x-2">
               <span>📱</span>
               <a 
-                href="https://wa.me/+5492901502672?text=Hola! Tuve un problema navegando en su sitio web."
+                href="https://wa.me/+5492901308927?text=Hola! Tuve un problema navegando en su sitio web."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-green-600 hover:text-green-700 font-medium transition-colors"
               >
-                WhatsApp: +54 290 150-2672
+                WhatsApp: +54 9 2901 308-927
               </a>
             </div>
             <div className="flex items-center justify-center space-x-4 mt-4">
