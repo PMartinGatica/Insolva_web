@@ -31,13 +31,14 @@ const Header = () => {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Nosotros', href: '#nosotros' },
     { name: 'Servicios', href: '#servicios' },
+    { name: 'Productos', href: '#productos' },
     { name: 'Equipo', href: '#equipo' },
     // { name: 'Contacto', href: '#contacto' }
   ]
 
   const handleNavClick = (href) => {
     setIsMenuOpen(false)
-    
+
     // Si no estamos en la página principal, navegar primero
     if (location.pathname !== '/') {
       navigate('/')
@@ -61,16 +62,15 @@ const Header = () => {
   }
 
   return (
-    <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo - Mobile First */}
           <div className="flex items-center space-x-2 z-[1001]">
-            <img 
-              src="/images/insolvalogo.png" 
-              alt="Insolva" 
+            <img
+              src="/images/insolvalogo.png"
+              alt="Insolva"
               className="h-8 sm:h-10 w-auto cursor-pointer"
               onClick={handleLogoClick}
             />
@@ -102,42 +102,36 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 relative">
-              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${
-                isMenuOpen ? 'rotate-45 top-3' : 'top-1'
-              }`}></span>
-              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${
-                isMenuOpen ? 'opacity-0' : 'top-3'
-              }`}></span>
-              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${
-                isMenuOpen ? '-rotate-45 top-3' : 'top-5'
-              }`}></span>
+              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 top-3' : 'top-1'
+                }`}></span>
+              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'top-3'
+                }`}></span>
+              <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 top-3' : 'top-5'
+                }`}></span>
             </div>
           </button>
         </div>
 
         {/* Mobile Navigation Overlay */}
-        <div className={`lg:hidden fixed inset-0 z-[999] transition-all duration-300 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}>
+        <div className={`lg:hidden fixed inset-0 z-[999] transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}>
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setIsMenuOpen(false)}
           ></div>
-          
+
           {/* Menu Panel */}
-          <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}>
+          <div className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}>
             <div className="pt-20 pb-6 px-6">
               <div className="flex flex-col space-y-6">
                 {navItems.map((item, index) => (
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    className={`text-left text-lg font-medium text-gray-800 hover:text-blue-600 transition-all duration-300 transform hover:translate-x-2 ${
-                      isMenuOpen ? 'animate-slideInRight' : ''
-                    }`}
+                    className={`text-left text-lg font-medium text-gray-800 hover:text-blue-600 transition-all duration-300 transform hover:translate-x-2 ${isMenuOpen ? 'animate-slideInRight' : ''
+                      }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {item.name}
