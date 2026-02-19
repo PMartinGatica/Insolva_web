@@ -31,7 +31,7 @@ Mensaje: ${formData.message}`;
     
     const encodedMessage = encodeURIComponent(message);
     // WhatsApp de Insolva
-    window.open(`https://wa.me/+5492901308927?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/+5492901641452?text=${encodedMessage}`, '_blank');
   };
 
   const services = [

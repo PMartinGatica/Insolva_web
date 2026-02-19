@@ -134,9 +134,16 @@ const About = () => {
                 No esperes más. Cada día que pasa sin optimizar tus procesos es dinero que pierdes.
               </p>
               <a
-                href="#contact"
+              
+                href="https://wa.me/5492901641452?text=%C2%A1Hola%20Insolva!%20Vi%20su%20propuesta%20para%20transformar%20operaciones%20en%20%C3%A9xito.%20Me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20para%20potenciar%20mi%20negocio.%20%F0%9F%9A%80"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block bg-white text-electric-blue px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all duration-300"
               >
+              
+            
+                
+              
                 Agenda tu consulta gratuita ahora
               </a>
             </div>
