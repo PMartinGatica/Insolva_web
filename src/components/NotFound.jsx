@@ -68,7 +68,7 @@ const NotFound = () => {
                 rel="noopener noreferrer"
                 className="text-green-600 hover:text-green-700 font-medium transition-colors"
               >
-                WhatsApp: +54 9 2901 308-927
+                WhatsApp: +54 9 2901 641-452
               </a>
             </div>
             <div className="flex items-center justify-center space-x-4 mt-4">

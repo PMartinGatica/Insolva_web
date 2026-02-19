@@ -74,7 +74,7 @@ Mensaje: ${formData.message}`;
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">WhatsApp</p>
-                    <p className="text-gray-600">+54 9 2901 308-927</p>
+                    <p className="text-gray-600">+54 9 2901 641-452</p>
                   </div>
                 </div>
 
